@@ -1,9 +1,9 @@
 <?php
-require "vendor/autoload.php";
 require "config/application.php";
 
 $app->get('/', function () use ($app) {
-  $app->render('index.html.php');
+  $data['posts'] = Post::find('all');
+  $app->render('index.html.php', $data);
 });
 
 $app->get('/hello/:name', function ($name) use ($app){
