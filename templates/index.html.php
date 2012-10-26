@@ -3,7 +3,7 @@
 <ul>
   <?php if(!empty($posts)){ ?>
     <?php foreach($posts as $post){ ?>
-      <li><a href="#"><?php echo $post->title;?></a> escrito por <?php echo $post->author;?></li>
+      <li><a href="post/<?php echo $post->slug;?>"><?php echo $post->title;?></a> escrito por <?php echo $post->author;?></li>
     <?php } ?>
   <?php }else{ ?>
     <li>Nenhum post encontrado</li>
